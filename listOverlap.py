@@ -1,13 +1,14 @@
+# return a list of common elements from list1, list2 without duplicates
 def lstOverlap(lst1, lst2):
     # lst = []
     #
     # for num in set(lst1):
-    #     if num in lst1 and num in lst2:
+    #     if num in lst2:
     #         lst.append(num)
     #
     # return lst
 
-    return [num for num in set(lst1) if num in lst1 and num in lst2]
+    return [num for num in set(lst1) if num in lst2]
 
 
 lst1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
