@@ -98,12 +98,12 @@ function myJsonStringify(obj){
   return resultStr;
 }
 
-// var obj = {3: 'a', "numVal": 7, "bool": true, 8: [1, 2, 3], "developer": {"fName": "Andy", "lName": "Li", "anotherObj": {"k1": "yep", "k2": [4, 5]}}};
-//
-// console.log(JSON.stringify(obj));
-// console.log(typeof JSON.stringify(obj));
-//
-// console.log(myJsonStringify(obj));
-// console.log(typeof myJsonStringify(obj));
-//
-// console.log(JSON.stringify(obj) === myJsonStringify(obj));
+var obj = {3: 'a', "numVal": 7, "bool": true, 8: [1, 2, 3], "developer": {"fName": "Andy", "lName": "Li", "anotherObj": {"k1": "yep", "k2": [4, 5]}}};
+
+console.log(JSON.stringify(obj));
+console.log(typeof JSON.stringify(obj));
+
+console.log(myJsonStringify(obj));
+console.log(typeof myJsonStringify(obj));
+
+console.log(JSON.stringify(obj) === myJsonStringify(obj));
