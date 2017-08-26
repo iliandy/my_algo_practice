@@ -67,7 +67,29 @@ function perm(arr) {
 
 // 3. Write a function to marshall a javascript object into a JSON String (Do not use JSON.Stringify, roll your own function)
 
+function myJsonStringifyPrim(prim) {
+  if (typeof prim == "string") {
+    return `"${obj}"`;
+  }
+  else if (typeof prim == "undefined" || typeof prim == "symbol") {
+    return undefined;
+  }
+  else {
+    return String(obj);
+  }
+}
+
 function myJsonStringify(obj){
+  if (typeof obj != "object") {
+    return myJsonStringifyPrim(obj);
+  }
+  else if (obj instanceof Array) {
+    return `[${obj}]`;
+  }
+  else if (obj == null) {
+    return String(obj);
+  }
+
   var resultArr = [];
 
   for (let key in obj) {
@@ -98,8 +120,13 @@ function myJsonStringify(obj){
   return resultStr;
 }
 
-var obj = {3: 'a', "numVal": 7, "bool": true, 8: [1, 2, 3], "developer": {"fName": "Andy", "lName": "Li", "anotherObj": {"k1": "yep", "k2": [4, 5]}}};
-
+// var obj = {3: 'a', "numVal": 7, "bool": true, 8: [1, 2, 3], "developer": {"fName": "Andy", "lName": "Li", "anotherObj": {"k1": "yep", "k2": [4, 5]}}};
+// var obj = false;
+// var obj = null;
+// var obj = 3;
+// var obj = "string";
+var obj = Symbol();
+//
 console.log(JSON.stringify(obj));
 console.log(typeof JSON.stringify(obj));
 
