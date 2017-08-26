@@ -125,12 +125,12 @@ function myJsonStringify(obj){
 // var obj = null;
 // var obj = 3;
 // var obj = "string";
-var obj = Symbol();
+// var obj = Symbol();
 //
-console.log(JSON.stringify(obj));
-console.log(typeof JSON.stringify(obj));
-
-console.log(myJsonStringify(obj));
-console.log(typeof myJsonStringify(obj));
-
-console.log(JSON.stringify(obj) === myJsonStringify(obj));
+// console.log(JSON.stringify(obj));
+// console.log(typeof JSON.stringify(obj));
+//
+// console.log(myJsonStringify(obj));
+// console.log(typeof myJsonStringify(obj));
+//
+// console.log(JSON.stringify(obj) === myJsonStringify(obj));
