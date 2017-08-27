@@ -69,27 +69,32 @@ function perm(arr) {
 
 function myJsonStringifyPrim(prim) {
   if (typeof prim == "string") {
-    return `"${obj}"`;
+    return `"${prim}"`;
   }
   else if (typeof prim == "undefined" || typeof prim == "symbol") {
     return undefined;
   }
   else {
-    return String(obj);
+    return String(prim);
   }
 }
 
 function myJsonStringify(obj){
+  // obj is primitive
   if (typeof obj != "object") {
     return myJsonStringifyPrim(obj);
   }
+  // obj is array
   else if (obj instanceof Array) {
-    return `[${obj}]`;
+    let result = obj.map(myJsonStringify)
+    return `[${result}]`;
   }
+  // obj is null
   else if (obj == null) {
     return String(obj);
   }
 
+  // obj is standard object, not primitive, array, or null
   var resultArr = [];
 
   for (let key in obj) {
@@ -124,12 +129,13 @@ function myJsonStringify(obj){
 // var obj = false;
 // var obj = null;
 // var obj = 3;
-// var obj = "string";
+// var obj = "testString";
 // var obj = Symbol();
-//
+// var obj = [1, 2, "testString", {"k1": [3, 4]}]
+
 // console.log(JSON.stringify(obj));
 // console.log(typeof JSON.stringify(obj));
-//
+
 // console.log(myJsonStringify(obj));
 // console.log(typeof myJsonStringify(obj));
 //
