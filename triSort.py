@@ -17,4 +17,4 @@ def triSort(lst):
 # lst = [2,1,3,4,7,5,9,6,8,13,12,11,10,0,15,16,14, 100, 101]
 lst = [2,1,3,4]
 
-print triSort(lst)
+print(triSort(lst))
