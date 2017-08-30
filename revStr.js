@@ -1,7 +1,9 @@
+// using built-in functions
 var revStr1 = (str) => {
   return str.split("").reverse().join("");
 }
 
+// using for loop
 var revStr2 = (str) => {
   revStr = "";
   for (var i = str.length - 1; i >= 0; i--) {
@@ -10,13 +12,13 @@ var revStr2 = (str) => {
   return revStr;
 }
 
+// using recursion
 var revStr3 = (str) => {
   // base case
   if (str.length <= 1) {
     return str;
   }
-  //
-  return revStr3(str.substr(1)) + str[0];
+  return revStr3(str.slice(1)) + str[0];
 }
 
 
