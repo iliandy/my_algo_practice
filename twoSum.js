@@ -12,7 +12,8 @@ const twoSum = (nums, target) => {
   ansArr = [];
 
   for (let i = 0; i < nums.length; i++) {
-    if (nums.includes(target - nums[i])) {
+    let numsNoi = nums.slice(0, i).concat(nums.slice(i+1));
+    if (numsNoi.includes(target - nums[i])) {
       ansArr.push(i);
     }
   }
@@ -20,5 +21,5 @@ const twoSum = (nums, target) => {
 
 }
 
-let nums = [2, 7, 11, -3, 15], target = 12;
+let nums = [2, 7, 11, -3, 15], target = 8;
 console.log(twoSum(nums, target));
