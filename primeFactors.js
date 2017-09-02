@@ -12,7 +12,6 @@ const primeFactors = (num) => {
       divisor++;
     }
   }
-
   return factors;
 }
 
