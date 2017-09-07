@@ -3,7 +3,7 @@ const primeNums = (maxNum) => {
 //   let primes = [];
 //
 //   // using sieve of Eratosthenes algo
-//   for (let i = 0; i <= 100; i++) {
+//   for (let i = 0; i <= maxNum; i++) {
 //     if (i < 10 && (i == 2 || i == 3 || i == 3 || i == 5 || i == 7) || (i > 10 && !(i % 2 == 0 || i % 3 == 0 || i % 5 == 0 || i % 7 == 0))) {
 //       primes.push(i);
 //     }
