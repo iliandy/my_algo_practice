@@ -1,9 +1,9 @@
 def strRepeat(arr):
     my_dict = {}
-    for str in arr:
+    for str_ in arr:
         if str in my_dict:
             return True
-        my_dict[str] = 1
+        my_dict[str_] = 1
     return False
 
     # arr2 = arr[:]
