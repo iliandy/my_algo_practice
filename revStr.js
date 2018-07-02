@@ -22,6 +22,6 @@ var revStr3 = (str) => {
 }
 
 
-// console.log("revStr1:", revStr1("Andy"));
-// console.log("revStr2:", revStr2("Andy"));
+console.log("revStr1:", revStr1("Andy"));
+console.log("revStr2:", revStr2("Andy"));
 console.log("revStr3:", revStr3("Andy"));

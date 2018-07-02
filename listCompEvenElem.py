@@ -3,4 +3,4 @@ def listCompEvenElem(lst):
     return [num for num in lst if num % 2 == 0]
 
 lst = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-print listCompEvenElem(lst)
+print(listCompEvenElem(lst))
